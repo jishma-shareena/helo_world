@@ -1,0 +1,63 @@
+#include<stdio.h>
+int main()
+{
+	int T,K,N,S[100000],B,C=0,D=0,i,x,o,j,m,t;
+	int a[T];
+	scanf("%d",&T);
+	printf("t eduth");
+	
+	if(T<=1000)
+	{
+		for(i=1;i<=T;i++)
+		{
+			scanf("%d%d" ,&N ,&K);
+			printf("n,k eduth");
+			if((N<=100000)&&(K<=100000)&&(C<=1000000))
+			{
+				C++;
+				for(i=1;i<=N;i++)
+				{
+					scanf("%d",&B);
+					printf("oru n");
+					if(B<=1000000000)
+					{
+						S[i]=B;
+					}
+					else
+					{
+						i--;
+					}
+				}
+				printf("\n onn eduth kazhinj");
+				for(x=1;x<=N;x++)
+				{
+					for(j=x;j<=N;j++)
+					{
+						if(S[x]<S[j])
+						{
+							t=S[x];
+							S[x]=S[j];
+							S[j]=t;
+						}
+					}
+				}
+				o=1;
+				while(o<=N)
+				{
+					if(S[o]>=S[K])
+					{
+						D++;
+						o++;
+					}
+					else
+					{
+						o++;
+					}
+				}
+			a[i]=D;	
+			printf("vale bann %d ",a[i]);	
+			}
+		}
+	}
+		return 0;
+}
